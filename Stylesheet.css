@@ -45,7 +45,7 @@ li a:hover:not(.active) {
 }
 .large-image {
 
-  background-image: url("https://cdn.vox-cdn.com/thumbor/447HMN7INx_iUrKHt_iWAwt4M78=/0x0:3000x2000/1200x675/filters:focal(1260x760:1740x1240)/cdn.vox-cdn.com/uploads/chorus_image/image/54467373/GettyImages_645480588.0.jpg");
+  background-image: url("images/frontPageBG.jpg");
   height: 100%;
   width: 1200px;
   height: 500px;
@@ -130,10 +130,20 @@ input[type=submit] {
 }
 
 footer {
-  position: absolute;
+  
   bottom: 0;
   width: 100%;
   float: bottom, left;
   font-size: 7px
   margin-top: 5px;
+}
+
+.Error_Message{
+  text-align: left;
+  margin-left: 153px;
+  color: red;
+}
+
+.bottom{
+  position: absolute;
 }

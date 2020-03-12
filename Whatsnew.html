@@ -3,6 +3,7 @@
 <head>
 <title>Page Title</title>
  <link rel="stylesheet" href="Stylesheet.css">
+ <script src="Formvalidation.js"></script>
 </head>
 <body>
 
@@ -18,13 +19,34 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <h3>Sign Up For Our Newsletter</h3>
 
-   <form> 
+   <form id="registration" name="registration" onsubmit="return validateForm()"> 
         <label for="EMAIL">Email Id: &nbsp; &nbsp; </label>
         <input type="email" name="Email" id="Email"> <br> 
+        <div id="EmailError" class="Error_Message"></div>
+
+        <label for="REEMAIL">Re-Email: &nbsp;</label>
+        <input type="email" name="ReEmail" id="ReEmail"> <br> 
+        <div id="ReEmailError" class="Error_Message"></div>
+
+        <label for="Account_ID">Username: &nbsp;</label> 
+        <input type="text" name="Account_ID" id="Account_ID"><br>  
+        <div id="UserNameError" class="Error_Message"></div>
+
         <label for="First Name">First Name: </label> 
-        <input type="text" name="First Name" id="First Name"><br>  
+        <input type="text" name="First_Name" id="First_Name"><br>  
+        <div id="First_NameError" class="Error_Message"></div>
+
         <label for="Last Name">Last Name: </label>
-        <input type="text" name="Last Name" id="Last Name"> <br>
+        <input type="text" name="Last_Name" id="Last Name"> <br>
+        <div id="Last_NameError" class="Error_Message"></div>
+
+        <label for="Phone">Phone: &nbsp; &nbsp; &nbsp; &nbsp;</label>
+        <input type="text" name="Phone" id="Phone" placeholder="(Optional)"> <br>
+        <div id="PhoneError" class="Error_Message"></div>
+
+        <label for="Password">Password: &nbsp;</label> 
+        <input type="text" name="Password" id="Password"><br>  
+        <div id="PasswordError" class="Error_Message"></div>
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="submit" value="Submit">
    </form> 
    
