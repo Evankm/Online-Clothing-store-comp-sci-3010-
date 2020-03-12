@@ -16,7 +16,7 @@ function chkFirstName(){
   var name = document.registration.First_Name.value;
   
   if (name ==  "") {
-    document.getElementById("First_NameError").innerHTML = "Invalid Name";
+    document.getElementById("First_NameError").innerHTML = "Invalid name";
     return false;
   } 
   
@@ -27,7 +27,7 @@ function chkFirstName(){
 
   for(var i =1; i < name.length; i++){
     if(name[i] == name[i].toUpperCase()){
-      document.getElementById("First_NameError").innerHTML = "Charcters following the first Charcter must be lowercase";
+      document.getElementById("First_NameError").innerHTML = "Charcters following the first charcter must be lowercase";
       console.log(name[i]);
       return false;
     }
@@ -39,7 +39,7 @@ function chkLastName(){
   var Lastname = document.registration.Last_Name.value;
   
   if (Lastname ==  "" ) {
-    document.getElementById("Last_NameError").innerHTML = "Invalid Name";
+    document.getElementById("Last_NameError").innerHTML = "Invalid name";
     return false;
   } 
   if (Lastname[0] !=  Lastname[0].toUpperCase()) {
@@ -49,7 +49,7 @@ function chkLastName(){
 
    for(var i = 1; i < Lastname.length; i++){
     if(Lastname[i] == Lastname[i].toUpperCase()){
-      document.getElementById("Last_NameError").innerHTML = "Charcters following the first Charcter must be lowercase";
+      document.getElementById("Last_NameError").innerHTML = "Charcters following the first charcter must be lowercase";
       return false;
     }
    }
@@ -59,8 +59,8 @@ function chkLastName(){
 function chkAccountID(){
   var id = document.registration.Account_ID.value;
 
-  if(id.length == 0){
-     document.getElementById("UserNameError").innerHTML = "invalid username";
+  if(id.length <= 1){
+     document.getElementById("UserNameError").innerHTML = "Invalid username";
      return false;
   }
 
@@ -112,7 +112,7 @@ function chkEmail(){
   }
   
   if(email != reEmail){
-    document.getElementById("ReEmailError").innerHTML = "Email Must match";
+    document.getElementById("ReEmailError").innerHTML = "Email must match";
     return false;
   }
   return true;
@@ -123,6 +123,11 @@ function chkPhone(){
 
   if(phone == ""){
     return true;
+  }
+
+  if(/^[0-9]{10}$/.test(phone) == false){
+    document.getElementById("PhoneError").innerHTML = "Must contain 10 digits";
+    return false;
   }
 
   if((/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/).test(phone) == false){
